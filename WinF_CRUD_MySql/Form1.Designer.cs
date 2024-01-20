@@ -36,13 +36,18 @@
             button2 = new Button();
             textBoxNome = new TextBox();
             textBoxCPF = new TextBox();
+            dataGridView1 = new DataGridView();
+            button3 = new Button();
+            textBoxId = new TextBox();
+            Id = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(69, 210);
+            button1.Location = new Point(121, 155);
             button1.Name = "button1";
-            button1.Size = new Size(129, 23);
+            button1.Size = new Size(129, 25);
             button1.TabIndex = 0;
             button1.Text = "Novo Registro";
             button1.UseVisualStyleBackColor = true;
@@ -51,65 +56,109 @@
             // Nome
             // 
             Nome.AutoSize = true;
-            Nome.Location = new Point(28, 9);
+            Nome.Location = new Point(28, 10);
             Nome.Name = "Nome";
-            Nome.Size = new Size(40, 15);
+            Nome.Size = new Size(46, 19);
             Nome.TabIndex = 1;
             Nome.Text = "Nome";
             // 
             // textBoxSobrenome
             // 
-            textBoxSobrenome.Location = new Point(120, 52);
+            textBoxSobrenome.Location = new Point(121, 59);
             textBoxSobrenome.Name = "textBoxSobrenome";
-            textBoxSobrenome.Size = new Size(245, 23);
+            textBoxSobrenome.Size = new Size(245, 25);
             textBoxSobrenome.TabIndex = 2;
             // 
             // sobrenome
             // 
             sobrenome.AutoSize = true;
-            sobrenome.Location = new Point(28, 60);
+            sobrenome.Location = new Point(28, 59);
             sobrenome.Name = "sobrenome";
-            sobrenome.Size = new Size(68, 15);
+            sobrenome.Size = new Size(79, 19);
             sobrenome.TabIndex = 3;
             sobrenome.Text = "Sobrenome";
             // 
             // cpf
             // 
             cpf.AutoSize = true;
-            cpf.Location = new Point(28, 100);
+            cpf.Location = new Point(28, 113);
             cpf.Name = "cpf";
-            cpf.Size = new Size(31, 15);
+            cpf.Size = new Size(36, 19);
             cpf.TabIndex = 4;
             cpf.Text = "Cpf*";
             // 
             // button2
             // 
-            button2.Location = new Point(216, 210);
+            button2.Location = new Point(266, 155);
             button2.Name = "button2";
-            button2.Size = new Size(129, 23);
+            button2.Size = new Size(129, 25);
             button2.TabIndex = 5;
             button2.Text = "Alterar Registro";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // textBoxNome
             // 
-            textBoxNome.Location = new Point(120, 9);
+            textBoxNome.Location = new Point(121, 10);
             textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(245, 23);
+            textBoxNome.Size = new Size(245, 25);
             textBoxNome.TabIndex = 6;
             // 
             // textBoxCPF
             // 
-            textBoxCPF.Location = new Point(120, 100);
+            textBoxCPF.Location = new Point(121, 113);
             textBoxCPF.Name = "textBoxCPF";
-            textBoxCPF.Size = new Size(100, 23);
+            textBoxCPF.Size = new Size(100, 25);
             textBoxCPF.TabIndex = 7;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = SystemColors.HighlightText;
+            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(28, 269);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(747, 229);
+            dataGridView1.TabIndex = 8;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(121, 224);
+            button3.Name = "button3";
+            button3.Size = new Size(129, 25);
+            button3.TabIndex = 9;
+            button3.Text = "Consutar Registro";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // textBoxId
+            // 
+            textBoxId.Location = new Point(307, 113);
+            textBoxId.Name = "textBoxId";
+            textBoxId.Size = new Size(30, 25);
+            textBoxId.TabIndex = 10;
+            // 
+            // Id
+            // 
+            Id.AutoSize = true;
+            Id.Location = new Point(266, 119);
+            Id.Name = "Id";
+            Id.Size = new Size(23, 19);
+            Id.TabIndex = 11;
+            Id.Text = "ID";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.Window;
+            ClientSize = new Size(800, 510);
+            Controls.Add(Id);
+            Controls.Add(textBoxId);
+            Controls.Add(button3);
+            Controls.Add(dataGridView1);
             Controls.Add(textBoxCPF);
             Controls.Add(textBoxNome);
             Controls.Add(button2);
@@ -118,10 +167,12 @@
             Controls.Add(textBoxSobrenome);
             Controls.Add(Nome);
             Controls.Add(button1);
+            Font = new Font("Segoe UI", 10F);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro de Cliente";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,5 +187,9 @@
         private Button button2;
         private TextBox textBoxNome;
         private TextBox textBoxCPF;
+        private DataGridView dataGridView1;
+        private Button button3;
+        private TextBox textBoxId;
+        private Label Id;
     }
 }
