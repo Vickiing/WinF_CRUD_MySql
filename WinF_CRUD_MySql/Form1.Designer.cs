@@ -40,16 +40,18 @@
             button3 = new Button();
             textBoxId = new TextBox();
             Id = new Label();
+            button4 = new Button();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(121, 155);
+            button1.Location = new Point(121, 184);
             button1.Name = "button1";
-            button1.Size = new Size(129, 25);
+            button1.Size = new Size(193, 25);
             button1.TabIndex = 0;
-            button1.Text = "Novo Registro";
+            button1.Text = "Inserir Registro";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -64,9 +66,10 @@
             // 
             // textBoxSobrenome
             // 
+            textBoxSobrenome.Cursor = Cursors.IBeam;
             textBoxSobrenome.Location = new Point(121, 59);
             textBoxSobrenome.Name = "textBoxSobrenome";
-            textBoxSobrenome.Size = new Size(245, 25);
+            textBoxSobrenome.Size = new Size(359, 25);
             textBoxSobrenome.TabIndex = 2;
             // 
             // sobrenome
@@ -89,7 +92,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(266, 155);
+            button2.Location = new Point(351, 184);
             button2.Name = "button2";
             button2.Size = new Size(129, 25);
             button2.TabIndex = 5;
@@ -99,13 +102,15 @@
             // 
             // textBoxNome
             // 
+            textBoxNome.Cursor = Cursors.IBeam;
             textBoxNome.Location = new Point(121, 10);
             textBoxNome.Name = "textBoxNome";
-            textBoxNome.Size = new Size(245, 25);
+            textBoxNome.Size = new Size(359, 25);
             textBoxNome.TabIndex = 6;
             // 
             // textBoxCPF
             // 
+            textBoxCPF.Cursor = Cursors.IBeam;
             textBoxCPF.Location = new Point(121, 113);
             textBoxCPF.Name = "textBoxCPF";
             textBoxCPF.Size = new Size(100, 25);
@@ -125,29 +130,50 @@
             // 
             // button3
             // 
-            button3.Location = new Point(121, 224);
+            button3.Location = new Point(121, 238);
             button3.Name = "button3";
-            button3.Size = new Size(129, 25);
+            button3.Size = new Size(193, 25);
             button3.TabIndex = 9;
-            button3.Text = "Consutar Registro";
+            button3.Text = "Consutar todos  registro";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
             // textBoxId
             // 
-            textBoxId.Location = new Point(307, 113);
+            textBoxId.Cursor = Cursors.IBeam;
+            textBoxId.Location = new Point(300, 110);
             textBoxId.Name = "textBoxId";
-            textBoxId.Size = new Size(30, 25);
+            textBoxId.Size = new Size(66, 25);
             textBoxId.TabIndex = 10;
             // 
             // Id
             // 
             Id.AutoSize = true;
-            Id.Location = new Point(266, 119);
+            Id.Location = new Point(257, 113);
             Id.Name = "Id";
             Id.Size = new Size(23, 19);
             Id.TabIndex = 11;
             Id.Text = "ID";
+            // 
+            // button4
+            // 
+            button4.Location = new Point(351, 238);
+            button4.Name = "button4";
+            button4.Size = new Size(129, 25);
+            button4.TabIndex = 12;
+            button4.Text = "Deletar Registro";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(28, 238);
+            button5.Name = "button5";
+            button5.Size = new Size(91, 25);
+            button5.TabIndex = 13;
+            button5.Text = "Consulta ID";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // Form1
             // 
@@ -155,6 +181,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Window;
             ClientSize = new Size(800, 510);
+            Controls.Add(button5);
+            Controls.Add(button4);
             Controls.Add(Id);
             Controls.Add(textBoxId);
             Controls.Add(button3);
@@ -191,5 +219,7 @@
         private Button button3;
         private TextBox textBoxId;
         private Label Id;
+        private Button button4;
+        private Button button5;
     }
 }
