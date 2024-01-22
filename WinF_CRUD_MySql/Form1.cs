@@ -179,8 +179,17 @@ namespace WinF_CRUD_MySql
                     string query = "DELETE FROM cadastro_clientes WHERE ID = @ID";
                     MySqlCommand command = new MySqlCommand(query, connection);
                     command.Parameters.AddWithValue("@ID", id);
-                    MessageBox.Show("Exclusao confirmada.");
-                    command.ExecuteNonQuery();
+                    if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(sobrenome) || string.IsNullOrWhiteSpace(cpf)||string.IsNullOrWhiteSpace(id))
+                    {
+                        MessageBox.Show("Para exclusão é necessário preencher todos os campos.");
+
+
+                    }
+                    else
+                    {
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Exclusao confirmada.");
+                    }
                 }
                 catch (Exception ex)
                 {

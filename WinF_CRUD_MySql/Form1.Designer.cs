@@ -60,9 +60,9 @@
             Nome.AutoSize = true;
             Nome.Location = new Point(28, 10);
             Nome.Name = "Nome";
-            Nome.Size = new Size(46, 19);
+            Nome.Size = new Size(52, 19);
             Nome.TabIndex = 1;
-            Nome.Text = "Nome";
+            Nome.Text = "Nome*";
             // 
             // textBoxSobrenome
             // 
@@ -77,9 +77,9 @@
             sobrenome.AutoSize = true;
             sobrenome.Location = new Point(28, 59);
             sobrenome.Name = "sobrenome";
-            sobrenome.Size = new Size(79, 19);
+            sobrenome.Size = new Size(85, 19);
             sobrenome.TabIndex = 3;
-            sobrenome.Text = "Sobrenome";
+            sobrenome.Text = "Sobrenome*";
             // 
             // cpf
             // 
